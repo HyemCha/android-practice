@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity"
+    android:orientation="vertical">
+    <!--<TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#0000ff"
+        android:text="This is a test."
+        android:textColor="#ff0000"
+        android:textSize="20pt"
+        android:textStyle="italic"
+        android:typeface="serif"/>
+    <Button
+        android:id="@+id/button1"
+        android:backgroundTint="#FF9800"
+        android:text="Button"
+         android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:onClick="onClick"/>-->
+    <EditText
+        android:id="@+id/editText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="여기에 텍스트를 입력하시오."
+        android:inputType="text"/>
+    <Button
+        android:id="@+id/button2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="텍스트 보이기"/>
+    <TextView
+        android:id="@+id/textView1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="TextView"
+        android:layout_margin="10pt"
+        android:shadowColor="@color/black"/>
+
+
+</LinearLayout>
