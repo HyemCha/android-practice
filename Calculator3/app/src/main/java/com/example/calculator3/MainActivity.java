@@ -14,35 +14,23 @@ public class MainActivity extends AppCompatActivity {
 
     int num1;
     int num2;
+    EditText e1;
+    EditText e2;
     ArrayList<Button> btns = new ArrayList<>();
-    Listener lis;
-    TextView result = (TextView) findViewById(R.id.eTextR);
 
-    class Listener implements View.OnClickListener {
+    class Listener implements View.OnClickListener{
 
         Button b;
+        TextView result;
 
-        public Listener(Button b) {
+        public Listener(Button b, TextView result) {
             this.b = b;
-        }
-
-        public int calculate(int num1, int num2) {
-            if(b.getText()=="+")
-                return num1 + num2;
-            if(b.getText()=="-")
-                return num1 - num2;
-            if(b.getText()=="*")
-                return num1 * num2;
-            return num1 / num2;
+            this.result = result;
         }
 
         @Override
         public void onClick(View view) {
-            num1 = Integer.parseInt(((EditText) findViewById(R.id.eText1)).getText().toString());
-            num2 = Integer.parseInt(((EditText) findViewById(R.id.eText2)).getText().toString());
-            String sum = calculate(num1, num2) + "";
 
-            result.setText(sum);
         }
     }
 
@@ -51,14 +39,36 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
+        e1 = (EditText) findViewById(R.id.eText1);
+        e2 = (EditText) findViewById(R.id.eText2);
+        TextView result = (TextView) findViewById(R.id.eTextR);
+
         btns.add((Button) findViewById(R.id.button1));
         btns.add((Button) findViewById(R.id.button2));
         btns.add((Button) findViewById(R.id.button3));
         btns.add((Button) findViewById(R.id.button4));
 
         for (Button b : btns) {
-            lis = new Listener(b);
-            b.setOnClickListener(lis);
+            Listener lis = new Listener(b, result);
         }
+    }
+
+    public static String calc(Button b, int num1, int num2) {
+        System.out.println("b : " + b);
+        int sum = 0;
+        if (b.getText() == "+") {
+            sum = num1 + num2;
+            return sum+"";
+        }
+        if (b.getText() == "-") {
+            sum = num1 - num2;
+            return sum+"";
+        }
+        if (b.getText() == "*") {
+            sum = num1 * num2;
+            return sum+"";
+        }
+        sum = num1 / num2;
+        return sum+"";
     }
 }
