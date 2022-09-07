@@ -18,21 +18,23 @@ public class MainActivity extends AppCompatActivity {
     EditText e2;
     ArrayList<Button> btns = new ArrayList<>();
 
-    class Listener implements View.OnClickListener{
-
-        Button b;
-        TextView result;
-
-        public Listener(Button b, TextView result) {
-            this.b = b;
-            this.result = result;
-        }
-
-        @Override
-        public void onClick(View view) {
-
-        }
-    }
+//    class Listener implements View.OnClickListener{
+//
+//        Button b;
+//        TextView result;
+//
+//        public Listener(Button b, TextView result) {
+//            this.b = b;
+//            this.result = result;
+//        }
+//
+//        @Override
+//        public void onClick(View view) {
+//            num1 = Integer.parseInt(e1.getText().toString());
+//            num2 = Integer.parseInt(e2.getText().toString());
+//            result.setText(calc(b, num1, num2));
+//        }
+//    }
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -48,27 +50,37 @@ public class MainActivity extends AppCompatActivity {
         btns.add((Button) findViewById(R.id.button3));
         btns.add((Button) findViewById(R.id.button4));
 
+//        for (Button b : btns) {
+//            Listener lis = new Listener(b, result);
+//            b.setOnClickListener(lis);
+//        }
+
         for (Button b : btns) {
-            Listener lis = new Listener(b, result);
+            b.setOnClickListener(e -> {
+                num1 = Integer.parseInt(e1.getText().toString());
+                num2 = Integer.parseInt(e2.getText().toString());
+                result.setText(calc(b, num1, num2));
+            });
         }
     }
 
     public static String calc(Button b, int num1, int num2) {
         System.out.println("b : " + b);
         int sum = 0;
-        if (b.getText() == "+") {
+        if (b.getText().toString().equals("+")) {
             sum = num1 + num2;
-            return sum+"";
+            return sum + "";
         }
-        if (b.getText() == "-") {
+        if (b.getText().toString().equals("-")) {
             sum = num1 - num2;
-            return sum+"";
+            return sum + "";
         }
-        if (b.getText() == "*") {
+        if (b.getText().toString().equals("*")) {
             sum = num1 * num2;
-            return sum+"";
+            return sum + "";
         }
         sum = num1 / num2;
-        return sum+"";
+        return sum + "";
+
     }
 }
