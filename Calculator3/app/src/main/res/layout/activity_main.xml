@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TableLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="10dp"
+    tools:context=".MainActivity">
+
+        <TableRow>
+            <TextView
+                android:id="@+id/textView1"
+                android:text="@string/number1" />
+            <EditText
+                android:id="@+id/eText1"
+                android:layout_weight="1" />
+        </TableRow>
+        <TableRow>
+            <TextView
+                android:id="@+id/textView2"
+                android:text="@string/number2" />
+            <EditText
+                android:id="@+id/eText2"
+                android:layout_weight="1" />
+        </TableRow>
+
+        <TableRow>
+            <Button
+                android:id="@+id/button1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="+" />
+        </TableRow>
+        <TableRow>
+            <Button
+                android:id="@+id/button2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="-" />
+        </TableRow>
+        <TableRow>
+            <Button
+                android:id="@+id/button3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="*" />
+        </TableRow>
+        <TableRow>
+            <Button
+                android:id="@+id/button4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="/" />
+        </TableRow>
+
+        <TableRow>
+            <TextView
+                android:textSize="25dp"
+                android:id="@+id/textViewR"
+                android:text="Result" />
+            <TextView
+                android:id="@+id/eTextR"
+                android:textSize="25dp"
+                android:layout_weight="1" />
+        </TableRow>
+
+
+</TableLayout>
