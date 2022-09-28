@@ -15,25 +15,32 @@
         android:layout_height="wrap_content"/>
 
     <TableLayout
+        android:id="@+id/tl"
+        android:layout_below="@id/number"
+        android:layout_above="@id/ok"
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="wrap_content">
         <TableRow
             android:layout_weight="1">
             <Button
                 android:id="@+id/btn1"
                 android:text="1"
-                android:layout_width="match_parent"
+                android:layout_width="0dp"
                 android:layout_height="match_parent"
                 android:layout_weight="1"
                 android:layout_margin="5px"/>
             <Button
                 android:id="@+id/btn2"
                 android:text="2"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
                 android:layout_weight="1"
                 android:layout_margin="5px"/>
             <Button
                 android:id="@+id/btn3"
                 android:text="3"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
                 android:layout_weight="1"
                 android:layout_margin="5px"/>
         </TableRow>
@@ -42,16 +49,22 @@
             <Button
                 android:id="@+id/btn4"
                 android:text="4"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
                 android:layout_weight="1"
                 android:layout_margin="5px"/>
             <Button
                 android:id="@+id/btn5"
                 android:text="5"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
                 android:layout_weight="1"
                 android:layout_margin="5px"/>
             <Button
                 android:id="@+id/btn6"
                 android:text="6"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
                 android:layout_weight="1"
                 android:layout_margin="5px"/>
         </TableRow>
@@ -60,19 +73,51 @@
             <Button
                 android:id="@+id/btn7"
                 android:text="7"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
                 android:layout_weight="1"
                 android:layout_margin="5px"/>
             <Button
                 android:id="@+id/btn8"
                 android:text="8"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
                 android:layout_weight="1"
                 android:layout_margin="5px"/>
             <Button
                 android:id="@+id/btn9"
                 android:text="9"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:layout_margin="5px"/>
+        </TableRow>
+        <TableRow android:layout_weight="1">
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"/>
+            <Button
+                android:id="@+id/btn0"
+                android:text="0"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:layout_margin="5px"/>
+            <Button
+                android:id="@+id/clear"
+                android:text="Clear"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
                 android:layout_weight="1"
                 android:layout_margin="5px"/>
         </TableRow>
     </TableLayout>
+    <Button
+        android:id="@+id/ok"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_text="ok"
+        android:layout_alignParentBottom="true"/>
 
 </RelativeLayout>
